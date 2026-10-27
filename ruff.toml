@@ -1,0 +1,4 @@
+[lint]
+# Same rule set as ruff's classic default, pinned so new ruff releases
+# don't change what CI checks.
+select = ["E4", "E7", "E9", "F"]
