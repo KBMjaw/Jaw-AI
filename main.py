@@ -446,12 +446,18 @@ async def pwa_live():
     }
 
     if vfd.get("connected"):
-        if sw.get("tripped"):  drive_status = "Fault"
-        elif sw.get("running"): drive_status = "Running"
-        else:                   drive_status = "Stopped"
-    elif machine_status == "FAULT":                                        drive_status = "Fault"
-    elif machine_status in ("NORMAL", "STONE STUCK", "NO RAW MATERIAL"):   drive_status = "Running"
-    else:                                                                   drive_status = "Stopped"
+        if sw.get("tripped"):
+            drive_status = "Fault"
+        elif sw.get("running"):
+            drive_status = "Running"
+        else:
+            drive_status = "Stopped"
+    elif machine_status == "FAULT":
+        drive_status = "Fault"
+    elif machine_status in ("NORMAL", "STONE STUCK", "NO RAW MATERIAL"):
+        drive_status = "Running"
+    else:
+        drive_status = "Stopped"
 
     ai_state = JAW_TO_AI.get(jaw_label, "EMPTY")
 

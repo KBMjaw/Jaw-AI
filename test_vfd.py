@@ -48,7 +48,7 @@ async def read_and_print(vfd):
     remote     = sw.get('remote', False)
     at_sp      = sw.get('at_setpoint', False)
 
-    print(f"\n  ── VFD Status ──────────────────────────")
+    print("\n  ── VFD Status ──────────────────────────")
     print(f"  Target  : {target_hz} Hz  ({s['target_rpm']} RPM)")
     print(f"  Actual  : {actual_hz} Hz  ({actual_rpm} RPM)")
     print(f"  Running : {'YES' if running else 'NO'}   "
@@ -58,7 +58,7 @@ async def read_and_print(vfd):
     if s['last_error']:
         print(f"  Error   : {s['last_error']}")
     print(f"  Writes  : {s['total_writes']}   Errors: {s['total_errors']}")
-    print(f"  ────────────────────────────────────────\n")
+    print("  ────────────────────────────────────────\n")
 
 async def monitor_loop(vfd):
     """Continuously read and display speed every 1 second."""

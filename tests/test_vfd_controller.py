@@ -8,8 +8,6 @@ import asyncio
 import time
 from unittest.mock import AsyncMock, MagicMock, patch, call
 
-import pytest
-
 from vfd_controller import VFDController, _decode_abb_status_word
 
 
