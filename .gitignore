@@ -40,3 +40,4 @@ crusher_monitor_app/.dart_tool/
 crusher_monitor_app/.flutter-plugins
 crusher_monitor_app/.flutter-plugins-dependencies
 crusher_monitor_app/build/
+.coverage
